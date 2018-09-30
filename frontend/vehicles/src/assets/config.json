@@ -1,0 +1,8 @@
+{
+  "idVehicle": 1,
+  "name": "Ford",
+  "vehicleType": {
+    "idType": 1,
+    "type": "Car"
+  } 
+}
