@@ -1,5 +1,5 @@
-<div style="margin-top: 30px;width: 90%;margin-left: 5%;margin-right: 5%;">
-    <p-table [value]="listVehicles">
+<div style="margin-top: 30px;margin-left: 5%;margin-right: 5%;">
+    <p-table id="vehiclesTable" [value]="listVehicles">
         <ng-template pTemplate="header">
             <tr>
                 <th>Id</th>
@@ -12,6 +12,9 @@
                 <td>{{vehicle.idVehicle}}</td>
                 <td><a [routerLink]="['/vehicle',vehicle.idVehicle]">{{vehicle.name}}</a></td>
                 <td>{{vehicle.type}}</td>
+                <td>
+                    <p-button icon="pi pi-trash" (click)="deleteVehicle(vehicle.idVehicle)" routerLink="/vehicles/all" updataa="vehiclesTable"></p-button>
+                </td>
             </tr>
         </ng-template>
     </p-table>

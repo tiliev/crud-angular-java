@@ -1,0 +1,10 @@
+tr td:first-child,td:last-child{
+    width:1% !important;
+    white-space:nowrap !important;
+}
+
+:host >>> .ui-table table {
+    border-collapse: collapse;
+    width: auto !important;
+    table-layout: fixed;
+}

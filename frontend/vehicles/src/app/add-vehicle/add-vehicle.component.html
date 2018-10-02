@@ -1,43 +1,34 @@
 <div class="container" align="center">
-	<h1>Add new vehicle</h1>
-
-	<form>
-		<table>
-			<tr>
-				<td>
-					<label for="name">Name:</label>
-      </td>
-      <td>
-        <input id="name" type="text" size="30" name="name" #name> 
+  <h1>Add new vehicle</h1>
+    <table>
+      <tr>
+        <td>
+          <label for="name">Name:</label>
+        </td>
+        <td>
+          <input id="name" type="text" size="30" name="name" #name>
         </td>
       </tr>
       <tr>
-      <td>
-        <label for="description">Description:</label>
-        <!--<input type="text" class="form-control" id="alterEgo">-->
+        <td>
+          <label for="description">Description:</label>
+          <!--<input type="text" class="form-control" id="alterEgo">-->
         </td>
         <td>
-        <textarea pInputTextarea id="description" type="text" cols=30 name="description" #description></textarea>
+          <textarea pInputTextarea id="description" type="text" cols=30 name="description" #description></textarea>
         </td>
-        </tr>
-        <tr>
-          <td>
-        <label for="type"> Type:</label>
+      </tr>
+      <tr>
+        <td>
+          <label for="type"> Type:</label>
         </td>
         <td>
-        <p-dropdown 
-         [options]="typeOfVehicles"
-         [(ngModel)]="typeSelected"
-         id="vehicleType"
-         name="vehicleType"
-         #vehicleType
-        >
-        </p-dropdown>
+          <p-dropdown [options]="typeOfVehicles" [(ngModel)]="typeSelected" id="vehicleType" name="vehicleType"
+            #vehicleType>
+          </p-dropdown>
         </td>
-        </tr>
- </table>
-      <p-button label="Add" (click)="test(name.value,description.value,vehicleType.value)"
-      routerLink="/vehicles/all"></p-button>
- 
-    </form>
+      </tr>
+    </table>
+    <p-button label="Add" (click)="test(name.value,description.value,vehicleType.value)" routerLink="/vehicles/all">
+    </p-button>
 </div>

@@ -1,4 +1,4 @@
-package com.lorenzolerate.contr;
+package com.lorenzolerate.controller;
 
 
 import java.util.List;
@@ -25,7 +25,6 @@ public class VehicleController {
 	VehicleService vehicleService;
 		
 	@RequestMapping(value = "/getAllVehicles", method = RequestMethod.GET, produces = "application/json")
-	@CrossOrigin(origins="https://stackblitz.com")
 	public String getVehicles(Model model) {		
 		List<Vehicle> listOfVehicles = vehicleService.getAllVehicles();
 		model.addAttribute("vehicle", new Vehicle());
@@ -39,7 +38,6 @@ public class VehicleController {
 		return new Gson().toJson(listOfVehicles);
 	}
 
-	@CrossOrigin(origins = "https://stackblitz.com/")
 	@RequestMapping(value = "/getVehicle/{idVehicle}", method = RequestMethod.GET, produces = "application/json")
 	public String getVehicleById(@PathVariable int idVehicle) {
 		Vehicle vehicle = vehicleService.getVehicle(idVehicle);

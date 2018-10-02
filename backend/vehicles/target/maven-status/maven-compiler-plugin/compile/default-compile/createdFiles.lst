@@ -1,5 +1,5 @@
 com/lorenzolerate/service/VehicleService.class
+com/lorenzolerate/controller/VehicleController.class
 com/lorenzolerate/dao/VehicleDAO.class
-com/lorenzolerate/contr/VehicleController.class
 com/lorenzolerate/model/Vehicle.class
 com/lorenzolerate/model/VehicleType.class

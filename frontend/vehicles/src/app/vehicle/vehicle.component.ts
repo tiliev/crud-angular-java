@@ -23,7 +23,7 @@ export class VehicleComponent implements OnInit {
   getVehicle() {
 
     let url = 'https://localhost:8443/vehicles/getAllVehicles';
-    
+
     this.apiService.restItemsServiceGetRestItems(url)
       .subscribe(data => {
         for (let vehicleJson of data) {
